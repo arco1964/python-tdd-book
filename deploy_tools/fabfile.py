@@ -6,7 +6,7 @@ REPO_URL = 'https://github.com/arco1964/python-tdd-book.git'
 
 def deploy():
     site_folder = f'/home/{env.user}/sites/{env.host}'
-    run(f'sudo mkdir -p {site_folder}')
+    run(f'mkdir -p {site_folder}')
     with cd(site_folder):
         _get_latest_source()
         _update_virtualenv()
